@@ -5,7 +5,7 @@ export function AddArticle(payload){
     return {type: ADD_ARTICLE, payload};
 }
 
-export function getData() {
+/*export function getData() {
     return function(dispatch) {
       return fetch("https://jsonplaceholder.typicode.com/posts")
         .then(response => response.json())
@@ -13,4 +13,9 @@ export function getData() {
           dispatch({ type: "DATA_LOADED", payload: json });
         });
     };
+  }
+  */
+
+  export function getData() {
+    return { type: "DATA_REQUESTED" };
   }
